@@ -36,10 +36,21 @@
       text-align: center;
       padding: 8px 10px 10px;
       line-height: 1.2;
-      position: sticky;
-      top: 0;
       z-index: 1000;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (min-width: 769px) {
+      header {
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        position: sticky;
+        top: 0;
+      }
     }
 
     header img {
@@ -147,9 +158,22 @@
         width: 100%;
       }
     }
-  </style>
+  header {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+body.loaded header {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 
   <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('copy', e => e.preventDefault());
   </script>
@@ -193,7 +217,7 @@
       <tr><td>🧠 Practice & Exam Tests</td><td>Powerful question bank for RS-CIT & others</td></tr>
       <tr><td>🎓 Digital Learning Zone</td><td>Specially curated for RS-CIT preparation</td></tr>
       <tr><td>📝 Auto Result</td><td>Instantly view marks & analysis</td></tr>
-      <tr><td>📊 Rankings</td><td>All student Rank list auto-generated</td></tr>
+      <tr><td>📊 Rankings</td><td>Top 10 student list auto-generated</td></tr>
       <tr><td>🖥️ Institute Panel</td><td>Manage student records efficiently</td></tr>
       <tr><td>📱 Mobile Friendly</td><td>Seamless use on mobile & PC</td></tr>
       <tr><td>♻️ Regular Updates</td><td>Always fresh and updated content</td></tr>
