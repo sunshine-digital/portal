@@ -3,35 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Online Test Portal for RS-CIT, Typing & Competitive Exams by Sunshine Institute Bayana. Try free now!">
-  <meta name="keywords" content="Online Test, RS-CIT, Steno, Typing, Bayana, Sunshine Institute">
-  <meta name="author" content="Atendra Sharma">
   <title>Sunshine Online Test Portal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
     }
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f5f7fa;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fdfdfd;
       color: #1f1f1f;
-      line-height: 1.6;
     }
     header {
-      background: linear-gradient(to right, #f1c40f, #f9e79f);
+      background: #f1c40f;
       padding: 20px;
       text-align: center;
       color: #000;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     header img {
-      width: 60px;
+      width: 70px;
       margin-bottom: 10px;
     }
     h1 {
@@ -39,15 +29,15 @@
       margin: 10px 0 5px;
     }
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       margin: 5px 0 20px;
-      font-weight: 600;
+      font-weight: normal;
     }
     .btn {
-      background-color: #007BFF;
+      background-color: #ff6f00;
       color: #fff;
       padding: 14px 28px;
-      font-size: 1rem;
+      font-size: 1.1rem;
       border: none;
       border-radius: 8px;
       text-decoration: none;
@@ -58,10 +48,10 @@
       transition: background 0.3s ease;
     }
     .btn:hover {
-      background-color: #0056b3;
+      background-color: #e65100;
     }
     section {
-      padding: 40px 20px;
+      padding: 30px 20px;
       max-width: 1100px;
       margin: auto;
     }
@@ -71,15 +61,10 @@
       align-items: center;
       gap: 20px;
       margin-top: 30px;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
     .intro-section img {
       width: 120px;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .intro-text {
       flex: 1;
@@ -93,8 +78,8 @@
       padding: 0;
     }
     ul li {
-      margin: 8px 0;
-      padding-left: 24px;
+      margin: 5px 0;
+      padding-left: 20px;
       position: relative;
     }
     ul li::before {
@@ -102,22 +87,21 @@
       position: absolute;
       left: 0;
     }
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .card {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
       background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
     }
-    .card h4 {
-      margin: 0 0 10px;
-      font-size: 1.1rem;
-      color: #333;
+    th, td {
+      padding: 10px;
+      border: 1px solid #eee;
+      font-size: 0.95rem;
+    }
+    th {
+      background-color: #f1c40f;
+      color: #000;
     }
     .qr {
       width: 200px;
@@ -126,13 +110,13 @@
     }
     footer {
       text-align: center;
-      background: #333;
+      background: #424242;
       color: #fff;
       padding: 20px;
     }
     @media (max-width: 768px) {
       body {
-        font-size: 1rem;
+        font-size: 0.95rem;
       }
       .intro-section {
         flex-direction: column;
@@ -140,12 +124,11 @@
       }
       .btn {
         width: 100%;
+        font-size: 1rem;
       }
     }
   </style>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('copy', e => e.preventDefault());
   </script>
@@ -158,19 +141,19 @@
     <a class="btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
   </header>
 
-  <section data-aos="fade-up">
+  <section>
     <h2>🌟 About Us – Sunshine Online Test Portal</h2>
     <p>Welcome to Sunshine Online Test Portal – A smart digital platform specially designed for:</p>
     <ul>
       <li>🎓 Competitive Exam Aspirants</li>
-      <li>🧑‍💻 RS-CIT Learners</li>
+      <li>🧑‍💼 RS-CIT Learners</li>
       <li>⌨️ Typing & Steno Students</li>
     </ul>
     <p>✅ Easy-to-use, mobile-friendly test system<br>
        ✅ Real-time exam-like experience<br>
        ✅ Instant results with performance feedback<br>
        ✅ Hindi + English language support</p>
-    <div class="intro-section" data-aos="fade-up">
+    <div class="intro-section">
       <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma">
       <div class="intro-text">
         <h3>Atendra Sharma</h3>
@@ -178,64 +161,72 @@
         <p>Director – Sunshine Computer Training & STENO Classes, Bayana</p>
       </div>
     </div>
-</section>
+  </section>
 
-<section data-aos="fade-up">
-  <h2>⚙️ System Features</h2>
-  <div class="card-container">
-    <div class="card"><h4>🔐 Login/Signup</h4><p>Secure access for students</p></div>
-    <div class="card"><h4>🧠 Practice & Exam Tests</h4><p>Includes a powerful RS-CIT question bank</p></div>
-    <div class="card"><h4>🎓 Digital Learning Zone</h4><p>Special zone for RS-CIT learners</p></div>
-    <div class="card"><h4>📝 Auto Result</h4><p>Instant marks & analysis</p></div>
-    <div class="card"><h4>📊 Rankings</h4><p>Top 10 student list auto-generated</p></div>
-    <div class="card"><h4>🖥️ Institute Panel</h4><p>Manage student data easily</p></div>
-    <div class="card"><h4>📱 Mobile Friendly</h4><p>Use it on phone & desktop</p></div>
-    <div class="card"><h4>♻️ Regular Updates</h4><p>Content updates regularly</p></div>
-  </div>
-</section>
+  <section>
+    <h2>⚙️ About Our System</h2>
+    <p>Sunshine Online Test Portal is a 100% cloud-based platform – ideal for coaching centers, institutes, and training academies.</p>
+    <table>
+      <tr><th>🔧 Feature</th><th>📋 Description</th></tr>
+      <tr><td>🔐 Login/Signup</td><td>Secure student access</td></tr>
+      <tr><td>🧠 Practice & Exam Tests</td><td>Powerful question bank for RS-CIT & others</td></tr>
+      <tr><td>🎓 Digital Learning Zone</td><td>Specially curated for RS-CIT preparation</td></tr>
+      <tr><td>📝 Auto Result</td><td>Instantly view marks & analysis</td></tr>
+      <tr><td>📊 Rankings</td><td>Top 10 student list auto-generated</td></tr>
+      <tr><td>🖥️ Institute Panel</td><td>Manage student records efficiently</td></tr>
+      <tr><td>📱 Mobile Friendly</td><td>Seamless use on mobile & PC</td></tr>
+      <tr><td>♻️ Regular Updates</td><td>Always fresh and updated content</td></tr>
+    </table>
+  </section>
 
-<section data-aos="fade-up">
-  <h2>🎯 Why Choose Sunshine?</h2>
-  <ul>
-    <li>📌 Worry about how to clear RS-CIT exam?</li>
-    <li>📌 Prefer digital learning over books?</li>
-    <li>📌 Need real-time prep at institute/home?</li>
-    <li>📌 Want to study anytime, anywhere?</li>
-  </ul>
-  <p><strong>🧭 Now study anywhere, anytime – only with SUNSHINE.</strong></p>
-</section>
+  <section>
+    <h2>🎯 Why Choose Sunshine?</h2>
+    <p>This smart test portal is perfect for students who:</p>
+    <ul>
+      <li>📌 Worry about how to clear the RS-CIT exam</li>
+      <li>📌 Want to prepare from anywhere, anytime</li>
+      <li>📌 Prefer digital practice over traditional books</li>
+      <li>📌 Want real-time training at home or institute</li>
+    </ul>
+    <p><strong>🧭 Now study anywhere, anytime – only with SUNSHINE.</strong></p>
+  </section>
 
-<section data-aos="fade-up">
-  <h2>💼 For Coaching Centers</h2>
-  <p>Want your own branded test panel? We provide fully customized systems:</p>
-  <ul>
-    <li>✅ No Setup Fee for Trial</li>
-    <li>✅ Institute Name + Address Branding</li>
-    <li>✅ Setup in 24 Hours</li>
-  </ul>
-</section>
+  <section>
+    <h2>💼 For Coaching Centers</h2>
+    <p>Want your own branded test panel?<br>
+    We provide customized systems with your institute’s name and address – fully set up in just 24 hours!</p>
+    <ul>
+      <li>🏱 No Setup Fee for Trial</li>
+      <li>⚙️ Full Customization Available</li>
+      <li>📞 Call now to get started!</li>
+    </ul>
+  </section>
 
-<section data-aos="fade-up">
-  <h2>💸 Pricing Plans</h2>
-  <div class="card-container">
-    <div class="card"><h4>🗓️ 3 Months</h4><p>With Your Institute Name – ₹999<br>With Sunshine Name – ₹599</p></div>
-    <div class="card"><h4>🗓️ 6 Months</h4><p>With Your Institute Name – ₹1499<br>With Sunshine Name – ₹999</p></div>
-    <div class="card"><h4>🗓️ 1 Year</h4><p>With Your Institute Name – ₹1999<br>With Sunshine Name – ₹1499</p></div>
-  </div>
-</section>
+  <section>
+    <h2>💸 Pricing Plans</h2>
+    <table>
+      <tr><th>Duration</th><th>With Your Institute Name</th><th>With Sunshine Name</th></tr>
+      <tr><td>🗓️ 3 Months</td><td>₹999</td><td>₹599</td></tr>
+      <tr><td>🗓️ 6 Months</td><td>₹1499</td><td>₹999</td></tr>
+      <tr><td>🗓️ 1 Year</td><td>₹1999</td><td>₹1499</td></tr>
+    </table>
+  </section>
 
-<section data-aos="fade-up">
-  <h2>💳 Make Payment via QR Code</h2>
-  <p>Make your payment using the following QR code:</p>
-  <img class="qr" src="https://github.com/sunshine-digital/portal/blob/main/QR%20Code.jpg?raw=true" alt="QR Code">
-</section>
+  <section>
+    <h2>💳 Make Payment via QR Code</h2>
+    <p>Make your payment using the following QR code:</p>
+    <img class="qr" src="https://github.com/sunshine-digital/portal/blob/main/QR%20Code.jpg?raw=true" alt="QR Code">
+  </section>
 
-<section data-aos="fade-up">
-  <h2>📞 Contact Us</h2>
-  <p>📍 Sunshine Computer Training & STENO Classes, Bayana<br>
-  ☎️ Call/WhatsApp: 9929856121<br>
-  📧 Email: sunshine.bayana@gmail.com</p>
-</section>
+  <section>
+    <h2>📞 Contact Us</h2>
+    <p>📍 Sunshine Computer Training & STENO Classes, Bayana<br>
+    ☎️ Call/WhatsApp: 9929856121<br>
+    📧 Email: sunshine.bayana@gmail.com</p>
+  </section>
 
+  <footer>
+    <p>🔥 A Smarter Way to Learn, Practice & Succeed – Only at SUNSHINE!</p>
+  </footer>
 </body>
 </html>
