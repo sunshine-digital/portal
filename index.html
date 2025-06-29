@@ -34,12 +34,10 @@
     header {
       background: #1a237e;
       color: #fff;
-      padding: 10px 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      display: flex;
+      padding: 15px 20px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
       gap: 10px;
     }
 
@@ -49,7 +47,6 @@
     }
 
     .header-text {
-      flex: 1;
       text-align: center;
     }
 
@@ -65,24 +62,22 @@
     .btn {
       background-color: #3949ab;
       color: #fff;
-      padding: 10px 20px;
+      padding: 10px 18px;
       font-size: 0.9rem;
       border: none;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      margin-top: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: background 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #1a237e;
+      background-color: #283593;
     }
 
     section {
       max-width: 1100px;
-      margin: 20px auto;
+      margin: 25px auto;
       padding: 0 20px;
     }
 
@@ -93,14 +88,12 @@
       align-items: center;
     }
 
-    .intro-section img, .extra-img {
+    .intro-section img,
+    .extra-img,
+    .qr {
       width: 100%;
       max-width: 240px;
       border-radius: 10px;
-    }
-
-    .intro-text, .column-content {
-      font-family: 'Inter', sans-serif;
     }
 
     ul {
@@ -110,20 +103,20 @@
 
     ul li::before {
       content: '✔️';
-      margin-right: 10px;
+      margin-right: 8px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 15px;
+      margin-top: 10px;
       background: #fff;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     }
 
     th, td {
       padding: 10px;
-      border: 1px solid #eee;
+      border: 1px solid #ddd;
       font-size: 0.9rem;
     }
 
@@ -132,32 +125,27 @@
       color: #fff;
     }
 
-    .qr {
-      width: 180px;
-      border-radius: 10px;
-    }
-
-    footer {
+    .footer {
       text-align: center;
       padding: 20px;
       background-color: #e3e3e3;
       font-size: 0.9rem;
-      color: #000;
       font-weight: 500;
     }
 
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
-      }
-
-      .btn {
-        width: 100%;
       }
 
       .split-section {
         grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+        margin-top: 10px;
       }
     }
   </style>
@@ -172,7 +160,7 @@
 </head>
 <body>
   <header>
-    <img src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
+    <img src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo">
     <div class="header-text">
       <h1>🧠 ONLINE TEST WEB PORTAL</h1>
       <h2>🚀 SUNSHINE Computer Institute, Bayana</h2>
@@ -190,10 +178,10 @@
           <li>🧑‍💼 RS-CIT Learners</li>
           <li>⌨️ Typing & Steno Students</li>
         </ul>
-        <p>✅ Mobile-friendly test system<br>✅ Exam-like experience<br>✅ Instant results with feedback<br>✅ Hindi + English support</p>
+        <p>✅ Mobile-friendly system<br>✅ Real exam-like practice<br>✅ Instant feedback<br>✅ Hindi + English support</p>
       </div>
       <div class="intro-section">
-        <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma" />
+        <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma">
         <div class="intro-text">
           <h3>Atendra Sharma</h3>
           <p>CEO & Founder, Sunshine Test Portal</p>
@@ -208,25 +196,25 @@
     <div class="split-section">
       <div>
         <table>
-          <tr><th>🔧 Feature</th><th>📋 Description</th></tr>
-          <tr><td>🔐 Login/Signup</td><td>Secure student access</td></tr>
-          <tr><td>🧠 Practice & Exam Tests</td><td>For RS-CIT & others</td></tr>
-          <tr><td>🎓 Learning Zone</td><td>Curated RS-CIT content</td></tr>
+          <tr><th>🔧 Feature</th><th>Description</th></tr>
+          <tr><td>🔐 Login/Signup</td><td>Secure access</td></tr>
+          <tr><td>🧠 Practice & Exam</td><td>For RS-CIT & others</td></tr>
+          <tr><td>🎓 Learning Zone</td><td>Smart RS-CIT preparation</td></tr>
           <tr><td>📝 Auto Result</td><td>Instant feedback</td></tr>
-          <tr><td>📊 Rankings</td><td>Top 10 student list</td></tr>
-          <tr><td>🖥️ Institute Panel</td><td>Manage student records</td></tr>
-          <tr><td>📱 Mobile Friendly</td><td>Works on all devices</td></tr>
-          <tr><td>♻️ Regular Updates</td><td>Fresh content always</td></tr>
+          <tr><td>📊 Rankings</td><td>Top 10 list</td></tr>
+          <tr><td>🖥️ Institute Panel</td><td>Manage records</td></tr>
+          <tr><td>📱 Mobile Friendly</td><td>Any device support</td></tr>
+          <tr><td>♻️ Regular Updates</td><td>Fresh content</td></tr>
         </table>
       </div>
-      <div class="column-content">
+      <div>
         <h3>💼 For Coaching Centers</h3>
         <ul>
-          <li>🏱 No Setup Fee Trial</li>
+          <li>🏱 Free Trial Available</li>
           <li>⚙️ Full Customization</li>
-          <li>⏳ Setup in 24 hours</li>
+          <li>📦 Setup in 24 hours</li>
         </ul>
-        <img class="extra-img" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Girls preparing for exam" />
+        <img class="extra-img" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Students">
       </div>
     </div>
   </section>
@@ -236,7 +224,7 @@
     <div class="split-section">
       <div>
         <table>
-          <tr><th>Duration</th><th>Price (With Your Institute Name)</th></tr>
+          <tr><th>Duration</th><th>With Your Institute Name</th></tr>
           <tr><td>🗓️ 3 Months</td><td>₹999</td></tr>
           <tr><td>🗓️ 6 Months</td><td>₹1499</td></tr>
           <tr><td>🗓️ 1 Year</td><td>₹1999</td></tr>
@@ -251,12 +239,12 @@
 
   <section>
     <h2>📞 Contact Us</h2>
-    <p>📍 Sunshine Computer Training & STENO Classes, Bayana<br />
-    ☎️ Call/WhatsApp: 9929856121<br />
+    <p>📍 Sunshine Computer Training & STENO Classes, Bayana<br>
+    ☎️ Call/WhatsApp: 9929856121<br>
     📧 Email: sunshine.bayana@gmail.com</p>
   </section>
 
-  <footer>
+  <footer class="footer">
     <p>🔥 A Smarter Way to Learn, Practice & Succeed – Only at SUNSHINE!</p>
     <p>© 2025 Sunshine Institute, Bayana. All rights reserved.</p>
   </footer>
