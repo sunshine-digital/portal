@@ -92,16 +92,11 @@
     }
 
     .student-footer-img {
-      display: none;
-      max-width: 260px;
-      margin: 20px auto;
+      display: block;
+      max-width: 320px;
+      margin: 30px auto 10px auto;
       border-radius: 12px;
-    }
-
-    @media (max-width: 992px) {
-      .student-footer-img {
-        display: block;
-      }
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     section {
@@ -113,8 +108,7 @@
     .intro-section {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      align-items: center;
+      justify-content: space-between;
       background: #f5f5f5;
       padding: 20px;
       border-radius: 12px;
@@ -122,12 +116,13 @@
     }
 
     .intro-section img {
-      width: 120px;
+      width: 150px;
       border-radius: 10px;
     }
 
     .intro-text {
       flex: 1;
+      padding-left: 30px;
     }
 
     .intro-text h3 {
@@ -216,6 +211,11 @@
         flex-direction: column;
         text-align: center;
       }
+
+      .intro-text {
+        padding-left: 0;
+        margin-top: 15px;
+      }
     }
   </style>
 
@@ -254,13 +254,13 @@
        ✅ Hindi + English language support</p>
 
     <div class="intro-section">
-      <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma" />
       <div class="intro-text">
         <h3>🌟 Atendra Sharma</h3>
         <p>CEO & Founder – Sunshine Online Test Portal</p>
         <p>Director – Sunshine Computer Training & STENO Classes, Bayana</p>
         <p>“A passionate educator and digital learning leader, dedicated to empowering students with skills, speed, and success.”</p>
       </div>
+      <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma" />
     </div>
   </section>
 
@@ -326,7 +326,7 @@
     📧 Email: sunshine.bayana@gmail.com</p>
   </section>
 
-  <!-- Student Image for Tablet & Mobile View -->
+  <!-- Centered Student Image -->
   <img class="student-footer-img" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image" />
 
   <!-- Footer -->
