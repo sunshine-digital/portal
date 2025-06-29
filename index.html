@@ -32,12 +32,11 @@
 
     header {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
+      flex-wrap: wrap;
       background: #fdd835;
-      color: #000;
-      padding: 20px;
+      padding: 10px 20px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       position: sticky;
       top: 0;
@@ -45,7 +44,6 @@
       opacity: 0;
       transform: translateY(-20px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      text-align: center;
     }
 
     body.loaded header {
@@ -53,56 +51,61 @@
       transform: translateY(0);
     }
 
-    header img.logo {
-      width: 60px;
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .logo {
+      width: 50px;
       border-radius: 8px;
     }
 
     .header-text h1 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      margin-top: 10px;
-      animation: glow 2s ease-in-out infinite alternate;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0;
     }
 
     .header-text h2 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 500;
-      margin-top: 5px;
+      margin: 0;
+    }
+
+    .header-center {
+      flex: 0 0 auto;
+      text-align: center;
+    }
+
+    .student-pic {
+      width: 100px;
+      max-height: 90px;
+      border-radius: 10px;
+    }
+
+    .header-right {
+      flex: 0 0 auto;
     }
 
     .header-btn {
       background-color: #ff6f00;
       color: #fff;
       padding: 10px 20px;
-      font-size: 1rem;
+      font-size: 0.95rem;
       border: none;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      white-space: nowrap;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-top: 15px;
       transition: background 0.3s ease;
     }
 
     .header-btn:hover {
       background-color: #e65100;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 5px #ffc107, 0 0 10px #ff6f00;
-      }
-      to {
-        text-shadow: 0 0 15px #ffa000, 0 0 25px #ff6f00;
-      }
-    }
-
-    .student-pic {
-      max-width: 180px;
-      border-radius: 12px;
-      margin-top: 15px;
     }
 
     .mobile-only {
@@ -179,19 +182,16 @@
     }
 
     @media (max-width: 768px) {
-      header {
-        padding: 15px 10px;
-      }
-
-      .header-text h1 {
-        font-size: 1.4rem;
+      .header-center {
+        display: none;
       }
 
       .header-btn {
         width: 100%;
+        margin-top: 10px;
       }
 
-      .intro-section {
+      .header-left {
         flex-direction: column;
         text-align: center;
       }
@@ -200,6 +200,7 @@
         display: block;
         margin: 10px auto 20px;
         max-width: 260px;
+        border-radius: 12px;
       }
 
       .student-pic {
@@ -218,16 +219,26 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <img class="logo" src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
-    <div class="header-text">
-      <h1>🧠 ONLINE TEST WEB PORTAL</h1>
-      <h2>🚀 Powered by SUNSHINE Computer Institute, Bayana</h2>
+    <div class="header-left">
+      <img class="logo" src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
+      <div class="header-text">
+        <h1>🧠 ONLINE TEST WEB PORTAL</h1>
+        <h2>🚀 Powered by SUNSHINE Computer Institute, Bayana</h2>
+      </div>
     </div>
-    <img class="student-pic" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image" />
-    <a class="header-btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
+
+    <div class="header-center">
+      <img class="student-pic" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image" />
+    </div>
+
+    <div class="header-right">
+      <a class="header-btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
+    </div>
   </header>
 
+  <!-- MAIN SECTIONS -->
   <section>
     <h2>🌟 About Us – Sunshine Online Test Portal</h2>
     <p>Welcome to Sunshine Online Test Portal – A smart digital platform specially designed for:</p>
@@ -312,9 +323,10 @@
     📧 Email: sunshine.bayana@gmail.com</p>
   </section>
 
-  <!-- Show this only on mobile -->
-  <img class="mobile-only" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image for Mobile" />
+  <!-- Image for Mobile Users -->
+  <img class="mobile-only" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Mobile Image" />
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Sunshine Institute, Bayana. All rights reserved.</p>
   </footer>
