@@ -112,14 +112,6 @@
       padding: 0 20px;
     }
 
-    .student-footer-img {
-      display: block;
-      max-width: 320px;
-      margin: 30px auto 10px auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
     .intro-section {
       display: flex;
       flex-wrap: wrap;
@@ -215,7 +207,6 @@
       margin-top: 10px;
     }
 
-    /* Flex layout for pricing and QR */
     .pricing-and-payment {
       display: flex;
       flex-wrap: wrap;
@@ -229,24 +220,29 @@
       min-width: 300px;
     }
 
-    /* Contact section with image */
     .contact-section {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      align-items: center;
+      gap: 40px;
+      padding: 0 20px;
+      margin: 30px auto;
+      max-width: 1100px;
     }
 
     .contact-img {
-      max-width: 300px;
+      max-width: 320px;
+      width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 1;
     }
 
     .contact-text {
       flex: 1;
       min-width: 300px;
+      text-align: left;
     }
 
     @media (max-width: 768px) {
@@ -300,6 +296,10 @@
 
       .contact-section {
         flex-direction: column;
+        text-align: center;
+      }
+
+      .contact-text {
         text-align: center;
       }
     }
