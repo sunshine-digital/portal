@@ -30,18 +30,16 @@
       line-height: 1.6;
     }
 
-   .notice-bar {
-  background: #fdd835;
-  color: #4E342E;  /* Dark Brown */
-  font-size: 15px;
-  font-weight: bold;
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-
+    .notice-bar {
+      background: #fdd835;
+      color: #4E342E;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+      border-radius: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
     marquee {
       padding: 5px 0;
@@ -217,6 +215,40 @@
       margin-top: 10px;
     }
 
+    /* Flex layout for pricing and QR */
+    .pricing-and-payment {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .pricing-block,
+    .payment-block {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    /* Contact section with image */
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .contact-img {
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .contact-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -261,6 +293,15 @@
       .dual-columns {
         flex-direction: column;
       }
+
+      .pricing-and-payment {
+        flex-direction: column;
+      }
+
+      .contact-section {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 
@@ -274,14 +315,12 @@
 </head>
 <body>
 
-  <!-- NOTICE BAR -->
   <div class="notice-bar">
-  <marquee behavior="scroll" direction="left" scrollamount="6">
-    🌟 अब RS-CIT Exam की तैयारी में डर की कोई जगह नहीं! 📱💻 Sunshine Online Test Portal दे रहा है 24x7 Practice – Mobile हो या PC, कभी भी–कहीं भी! 🎯 भूलना नहीं, Revision के साथ Confidence पाओ – और पाओ Exam में सफलता! ✅ आज ही जुड़िए!
-  </marquee>
-</div>
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      🌟 अब RS-CIT Exam की तैयारी में डर की कोई जगह नहीं! 📱💻 Sunshine Online Test Portal दे रहा है 24x7 Practice – Mobile हो या PC, कभी भी–कहीं भी! 🎯 भूलना नहीं, Revision के साथ Confidence पाओ – और पाओ Exam में सफलता! ✅ आज ही जुड़िए!
+    </marquee>
+  </div>
 
-  <!-- HEADER -->
   <header>
     <img class="logo" src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
     <div class="header-title">
@@ -291,7 +330,6 @@
     <a class="header-btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
   </header>
 
-  <!-- ABOUT US -->
   <section>
     <h2>🌟 About Us – Sunshine Online Test Portal</h2>
     <p>Welcome to Sunshine Online Test Portal – A smart digital platform specially designed for:</p>
@@ -316,7 +354,6 @@
     </div>
   </section>
 
-  <!-- SIDE-BY-SIDE BLOCKS -->
   <div class="dual-columns">
     <section>
       <h2>⚙️ About Our System</h2>
@@ -347,41 +384,33 @@
     </section>
   </div>
 
-  <section>
-    <h2>💼 For Coaching Centers</h2>
-    <p>Want your own branded test panel?<br>
-    We provide customized systems with your institute’s name and address – fully set up in just 24 hours!</p>
-    <ul>
-      <li>🏱 No Setup Fee for Trial</li>
-      <li>⚙️ Full Customization Available</li>
-      <li>📞 Call now to get started!</li>
-    </ul>
-  </section>
+  <div class="pricing-and-payment">
+    <section class="pricing-block">
+      <h2>💸 Pricing Plans</h2>
+      <table>
+        <tr><th>Duration</th><th>With Your Institute Name</th></tr>
+        <tr><td>🗓️ 3 Months</td><td>₹999</td></tr>
+        <tr><td>🗓️ 6 Months</td><td>₹1499</td></tr>
+        <tr><td>🗓️ 1 Year</td><td>₹1999</td></tr>
+      </table>
+    </section>
 
-  <section>
-    <h2>💸 Pricing Plans</h2>
-    <table>
-      <tr><th>Duration</th><th>With Your Institute Name</th></tr>
-      <tr><td>🗓️ 3 Months</td><td>₹999</td></tr>
-      <tr><td>🗓️ 6 Months</td><td>₹1499</td></tr>
-      <tr><td>🗓️ 1 Year</td><td>₹1999</td></tr>
-    </table>
-  </section>
+    <section class="payment-block">
+      <h2>💳 Make Payment via QR Code</h2>
+      <p>Make your payment using the following QR code:</p>
+      <img class="qr" src="https://github.com/sunshine-digital/portal/blob/main/QR%20Code.jpg?raw=true" alt="QR Code" />
+    </section>
+  </div>
 
-  <section>
-    <h2>💳 Make Payment via QR Code</h2>
-    <p>Make your payment using the following QR code:</p>
-    <img class="qr" src="https://github.com/sunshine-digital/portal/blob/main/QR%20Code.jpg?raw=true" alt="QR Code" />
+  <section class="contact-section">
+    <img class="contact-img" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image" />
+    <div class="contact-text">
+      <h2>📞 Contact Us</h2>
+      <p>📍 Sunshine Computer Training & STENO Classes, Bayana<br>
+      ☎️ Call/WhatsApp: 9929856121<br>
+      📧 Email: sunshine.bayana@gmail.com</p>
+    </div>
   </section>
-
-  <section>
-    <h2>📞 Contact Us</h2>
-    <p>📍 Sunshine Computer Training & STENO Classes, Bayana<br>
-    ☎️ Call/WhatsApp: 9929856121<br>
-    📧 Email: sunshine.bayana@gmail.com</p>
-  </section>
-
-  <img class="student-footer-img" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image" />
 
   <footer>
     <p>© 2025 Sunshine Institute, Bayana. All rights reserved.</p>
