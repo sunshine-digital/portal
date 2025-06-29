@@ -32,12 +32,12 @@
 
     header {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      justify-content: center;
       background: #fdd835;
       color: #000;
-      padding: 12px 20px;
+      padding: 20px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       position: sticky;
       top: 0;
@@ -45,6 +45,7 @@
       opacity: 0;
       transform: translateY(-20px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      text-align: center;
     }
 
     body.loaded header {
@@ -52,26 +53,22 @@
       transform: translateY(0);
     }
 
-    header img {
+    header img.logo {
       width: 60px;
       border-radius: 8px;
-      margin-right: 10px;
-    }
-
-    .header-text {
-      flex-grow: 1;
-      margin-left: 10px;
     }
 
     .header-text h1 {
       font-size: 1.8rem;
       font-weight: 800;
+      margin-top: 10px;
       animation: glow 2s ease-in-out infinite alternate;
     }
 
     .header-text h2 {
       font-size: 1rem;
       font-weight: 500;
+      margin-top: 5px;
     }
 
     .header-btn {
@@ -85,6 +82,7 @@
       font-weight: bold;
       white-space: nowrap;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 15px;
       transition: background 0.3s ease;
     }
 
@@ -99,6 +97,16 @@
       to {
         text-shadow: 0 0 15px #ffa000, 0 0 25px #ff6f00;
       }
+    }
+
+    .student-pic {
+      max-width: 180px;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+
+    .mobile-only {
+      display: none;
     }
 
     section {
@@ -172,9 +180,7 @@
 
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 15px 10px;
       }
 
       .header-text h1 {
@@ -182,13 +188,22 @@
       }
 
       .header-btn {
-        margin-top: 10px;
         width: 100%;
       }
 
       .intro-section {
         flex-direction: column;
         text-align: center;
+      }
+
+      .mobile-only {
+        display: block;
+        margin: 10px auto 20px;
+        max-width: 260px;
+      }
+
+      .student-pic {
+        display: none;
       }
     }
   </style>
@@ -202,15 +217,15 @@
   </script>
 </head>
 <body>
+
   <header>
-    <img src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
+    <img class="logo" src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
     <div class="header-text">
       <h1>🧠 ONLINE TEST WEB PORTAL</h1>
       <h2>🚀 Powered by SUNSHINE Computer Institute, Bayana</h2>
     </div>
+    <img class="student-pic" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image" />
     <a class="header-btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
-    <img class="student-pic desktop-only" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image" />
-
   </header>
 
   <section>
@@ -296,7 +311,9 @@
     ☎️ Call/WhatsApp: 9929856121<br>
     📧 Email: sunshine.bayana@gmail.com</p>
   </section>
-<img class="student-pic mobile-only" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image" />
+
+  <!-- Show this only on mobile -->
+  <img class="mobile-only" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image for Mobile" />
 
   <footer>
     <p>© 2025 Sunshine Institute, Bayana. All rights reserved.</p>
