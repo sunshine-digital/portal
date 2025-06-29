@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sunshine Online Test Portal</title>
 
   <!-- SEO Meta Tags -->
@@ -10,17 +10,17 @@
   <meta name="keywords" content="RS-CIT, Online Test, Typing Practice, Sunshine Institute, Competitive Exams" />
   <meta name="author" content="Atendra Sharma" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
 
   <!-- AOS Animation -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -31,17 +31,16 @@
     }
 
     header {
-      background: #fdd835;
-      color: #000;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      padding: 6px 20px;
-      gap: 20px;
+      gap: 15px;
+      background: #fdd835;
+      color: #000;
+      padding: 10px 20px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      z-index: 1000;
       position: sticky;
       top: 0;
+      z-index: 1000;
       opacity: 0;
       transform: translateY(-20px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -53,36 +52,45 @@
     }
 
     header img {
-      width: 55px;
-      height: 55px;
+      width: 60px;
       border-radius: 8px;
+    }
+
+    .header-text {
+      flex-grow: 1;
     }
 
     .header-text h1 {
       font-size: 1.5rem;
       font-weight: 700;
-      background: linear-gradient(90deg, #ff6f00, #ff9800);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+      animation: glow 2s ease-in-out infinite alternate;
     }
 
     .header-text h2 {
       font-size: 1rem;
-      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ffc107, 0 0 10px #ff6f00;
+      }
+      to {
+        text-shadow: 0 0 15px #ffa000, 0 0 25px #ff6f00;
+      }
     }
 
     .btn {
       background-color: #ff6f00;
       color: #fff;
-      padding: 12px 22px;
+      padding: 12px 24px;
       font-size: 1rem;
       border: none;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 20px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: background 0.3s ease;
     }
@@ -157,20 +165,24 @@
       padding: 20px;
       background-color: #eee;
       font-size: 0.95rem;
+      color: #555;
     }
 
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-      }
       .intro-section {
         flex-direction: column;
         text-align: center;
       }
       .btn {
         width: 100%;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+      }
+      .header-text h1 {
+        font-size: 1.3rem;
       }
     }
   </style>
@@ -184,15 +196,17 @@
   </script>
 </head>
 <body>
-
   <header>
-    <img src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo">
+    <img src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
     <div class="header-text">
       <h1>🧠 ONLINE TEST WEB PORTAL</h1>
       <h2>🚀 Powered by SUNSHINE Computer Institute, Bayana</h2>
-      <a class="btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
     </div>
   </header>
+
+  <section>
+    <a class="btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
+  </section>
 
   <section>
     <h2>🌟 About Us – Sunshine Online Test Portal</h2>
@@ -207,13 +221,52 @@
        ✅ Instant results with performance feedback<br>
        ✅ Hindi + English language support</p>
     <div class="intro-section">
-      <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma">
+      <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma" />
       <div class="intro-text">
         <h3>Atendra Sharma</h3>
         <p>CEO & Founder, Sunshine Online Test Portal</p>
         <p>Director – Sunshine Computer Training & STENO Classes, Bayana</p>
       </div>
     </div>
+  </section>
+
+  <section>
+    <h2>⚙️ About Our System</h2>
+    <p>Sunshine Online Test Portal is a 100% cloud-based platform – ideal for coaching centers, institutes, and training academies.</p>
+    <table>
+      <tr><th>🔧 Feature</th><th>📋 Description</th></tr>
+      <tr><td>🔐 Login/Signup</td><td>Secure student access</td></tr>
+      <tr><td>🧠 Practice & Exam Tests</td><td>Powerful question bank for RS-CIT & others</td></tr>
+      <tr><td>🎓 Digital Learning Zone</td><td>Specially curated for RS-CIT preparation</td></tr>
+      <tr><td>📝 Auto Result</td><td>Instantly view marks & analysis</td></tr>
+      <tr><td>📊 Rankings</td><td>Top 10 student list auto-generated</td></tr>
+      <tr><td>🖥️ Institute Panel</td><td>Manage student records efficiently</td></tr>
+      <tr><td>📱 Mobile Friendly</td><td>Seamless use on mobile & PC</td></tr>
+      <tr><td>♻️ Regular Updates</td><td>Always fresh and updated content</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🎯 Why Choose Sunshine?</h2>
+    <p>This smart test portal is perfect for students who:</p>
+    <ul>
+      <li>📌 Worry about how to clear the RS-CIT exam</li>
+      <li>📌 Want to prepare from anywhere, anytime</li>
+      <li>📌 Prefer digital practice over traditional books</li>
+      <li>📌 Want real-time training at home or institute</li>
+    </ul>
+    <p><strong>🧭 Now study anywhere, anytime – only with SUNSHINE.</strong></p>
+  </section>
+
+  <section>
+    <h2>💼 For Coaching Centers</h2>
+    <p>Want your own branded test panel?<br>
+    We provide customized systems with your institute’s name and address – fully set up in just 24 hours!</p>
+    <ul>
+      <li>🏱 No Setup Fee for Trial</li>
+      <li>⚙️ Full Customization Available</li>
+      <li>📞 Call now to get started!</li>
+    </ul>
   </section>
 
   <section>
@@ -229,7 +282,7 @@
   <section>
     <h2>💳 Make Payment via QR Code</h2>
     <p>Make your payment using the following QR code:</p>
-    <img class="qr" src="https://github.com/sunshine-digital/portal/blob/main/QR%20Code.jpg?raw=true" alt="QR Code">
+    <img class="qr" src="https://github.com/sunshine-digital/portal/blob/main/QR%20Code.jpg?raw=true" alt="QR Code" />
   </section>
 
   <section>
@@ -239,9 +292,8 @@
     📧 Email: sunshine.bayana@gmail.com</p>
   </section>
 
-   <footer style="background-color: #f4f4f4; padding: 25px 10px; border-top: 2px solid #ddd; font-size: 1rem; color: #333; line-height: 1.6;">
-    <p style="margin-bottom: 8px;">🔥 A Smarter Way to Learn, Practice & Succeed – Only at <strong>SUNSHINE</strong>!</p>
-    <p>© 2025 <strong>Sunshine Institute, Bayana</strong>. All rights reserved.</p>
+  <footer>
+    <p>© 2025 Sunshine Institute, Bayana. All rights reserved.</p>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
