@@ -11,7 +11,7 @@
   <meta name="author" content="Atendra Sharma" />
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- AOS Scroll Animations -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
@@ -24,48 +24,53 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #fdfdfd;
       color: #333;
       line-height: 1.6;
+      font-size: 15px;
     }
 
     header {
       background: #1a237e;
       color: #fff;
-      text-align: center;
-      padding: 10px 15px;
+      padding: 10px 20px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    body.loaded header {
-      opacity: 1;
-      transform: translateY(0);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     header img {
-      width: 70px;
-      border-radius: 10px;
+      width: 60px;
+      border-radius: 8px;
     }
 
-    h1, h2, h3 {
-      margin: 10px 0;
+    .header-text {
+      flex: 1;
+      margin-left: 15px;
+    }
+
+    .header-text h1 {
+      font-size: 1.2rem;
+    }
+
+    .header-text h2 {
+      font-size: 1rem;
+      font-weight: 400;
     }
 
     .btn {
       background-color: #3949ab;
       color: #fff;
-      padding: 14px 28px;
-      font-size: 1rem;
+      padding: 10px 20px;
+      font-size: 0.9rem;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      display: inline-block;
-      margin-top: 20px;
+      margin-top: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: background 0.3s ease;
     }
@@ -76,7 +81,7 @@
 
     section {
       max-width: 1100px;
-      margin: 30px auto;
+      margin: 20px auto;
       padding: 0 20px;
     }
 
@@ -84,7 +89,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
-      align-items: center;
       background: #f4f4f4;
       padding: 20px;
       border-radius: 12px;
@@ -92,7 +96,7 @@
     }
 
     .intro-section img {
-      width: 120px;
+      width: 100px;
       border-radius: 10px;
     }
 
@@ -121,7 +125,7 @@
     th, td {
       padding: 10px;
       border: 1px solid #eee;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     th {
@@ -130,7 +134,7 @@
     }
 
     .qr {
-      width: 200px;
+      width: 180px;
       display: block;
       margin: 20px auto;
     }
@@ -139,33 +143,42 @@
       text-align: center;
       padding: 20px;
       background-color: #e3e3e3;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #000;
       font-weight: 500;
     }
 
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .btn {
+        width: 100%;
+        margin-top: 10px;
+      }
+
       .intro-section {
         flex-direction: column;
         text-align: center;
-      }
-      .btn {
-        width: 100%;
       }
     }
 
     @media (min-width: 769px) and (max-width: 1024px) {
       .intro-section {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 40px;
+        align-items: center;
       }
 
-      .intro-section img {
-        width: 150px;
-      }
-
-      section {
-        padding: 0 40px;
+      .about-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
       }
     }
   </style>
@@ -181,36 +194,41 @@
 <body>
   <header>
     <img src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
-    <h1>🧠 ONLINE TEST WEB PORTAL</h1>
-    <h2>🚀 Powered by SUNSHINE Computer Institute, Bayana</h2>
+    <div class="header-text">
+      <h1>🧠 ONLINE TEST WEB PORTAL</h1>
+      <h2>🚀 Powered by SUNSHINE Computer Institute, Bayana</h2>
+    </div>
     <a class="btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
   </header>
 
   <section>
     <h2>🌟 About Us – Sunshine Online Test Portal</h2>
-    <p>Welcome to Sunshine Online Test Portal – A smart digital platform specially designed for:</p>
-    <ul>
-      <li>🎓 Competitive Exam Aspirants</li>
-      <li>🧑‍💼 RS-CIT Learners</li>
-      <li>⌨️ Typing & Steno Students</li>
-    </ul>
-    <p>✅ Easy-to-use, mobile-friendly test system<br />
-       ✅ Real-time exam-like experience<br />
-       ✅ Instant results with performance feedback<br />
-       ✅ Hindi + English language support</p>
-    <div class="intro-section">
-      <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma" />
-      <div class="intro-text">
-        <h3>Atendra Sharma</h3>
-        <p>CEO & Founder, Sunshine Online Test Portal</p>
-        <p>Director – Sunshine Computer Training & STENO Classes, Bayana</p>
+    <div class="about-split">
+      <div>
+        <p>Welcome to Sunshine Online Test Portal – A smart digital platform specially designed for:</p>
+        <ul>
+          <li>🎓 Competitive Exam Aspirants</li>
+          <li>🧑‍💼 RS-CIT Learners</li>
+          <li>⌨️ Typing & Steno Students</li>
+        </ul>
+        <p>✅ Easy-to-use, mobile-friendly test system<br />
+           ✅ Real-time exam-like experience<br />
+           ✅ Instant results with performance feedback<br />
+           ✅ Hindi + English language support</p>
+      </div>
+      <div class="intro-section">
+        <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma" />
+        <div class="intro-text">
+          <h3>Atendra Sharma</h3>
+          <p>CEO & Founder, Sunshine Online Test Portal</p>
+          <p>Director – Sunshine Computer Training & STENO Classes, Bayana</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section>
     <h2>⚙️ About Our System</h2>
-    <p>Sunshine Online Test Portal is a 100% cloud-based platform – ideal for coaching centers, institutes, and training academies.</p>
     <table>
       <tr><th>🔧 Feature</th><th>📋 Description</th></tr>
       <tr><td>🔐 Login/Signup</td><td>Secure student access</td></tr>
@@ -222,18 +240,6 @@
       <tr><td>📱 Mobile Friendly</td><td>Seamless use on mobile & PC</td></tr>
       <tr><td>♻️ Regular Updates</td><td>Always fresh and updated content</td></tr>
     </table>
-  </section>
-
-  <section>
-    <h2>🎯 Why Choose Sunshine?</h2>
-    <p>This smart test portal is perfect for students who:</p>
-    <ul>
-      <li>📌 Worry about how to clear the RS-CIT exam</li>
-      <li>📌 Want to prepare from anywhere, anytime</li>
-      <li>📌 Prefer digital practice over traditional books</li>
-      <li>📌 Want real-time training at home or institute</li>
-    </ul>
-    <p><strong>🧭 Now study anywhere, anytime – only with SUNSHINE.</strong></p>
   </section>
 
   <section>
@@ -250,16 +256,15 @@
   <section>
     <h2>💸 Pricing Plans</h2>
     <table>
-      <tr><th>Duration</th><th>With Your Institute Name</th><th>With Sunshine Name</th></tr>
-      <tr><td>🗓️ 3 Months</td><td>₹999</td><td>₹599</td></tr>
-      <tr><td>🗓️ 6 Months</td><td>₹1499</td><td>₹999</td></tr>
-      <tr><td>🗓️ 1 Year</td><td>₹1999</td><td>₹1499</td></tr>
+      <tr><th>Duration</th><th>Price (With Your Institute Name)</th></tr>
+      <tr><td>🗓️ 3 Months</td><td>₹999</td></tr>
+      <tr><td>🗓️ 6 Months</td><td>₹1499</td></tr>
+      <tr><td>🗓️ 1 Year</td><td>₹1999</td></tr>
     </table>
   </section>
 
   <section>
     <h2>💳 Make Payment via QR Code</h2>
-    <p>Make your payment using the following QR code:</p>
     <img class="qr" src="https://github.com/sunshine-digital/portal/blob/main/QR%20Code.jpg?raw=true" alt="QR Code" />
   </section>
 
