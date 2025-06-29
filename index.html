@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sunshine Online Test Portal</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Sunshine Online Test Portal - Practice RS-CIT, Typing & Competitive Exams Online"/>
-  <meta name="keywords" content="RS-CIT, Online Test, Typing Practice, Sunshine Institute, Competitive Exams"/>
-  <meta name="author" content="Atendra Sharma"/>
+  <meta name="description" content="Sunshine Online Test Portal - Practice RS-CIT, Typing & Competitive Exams Online">
+  <meta name="keywords" content="RS-CIT, Online Test, Typing Practice, Sunshine Institute, Competitive Exams">
+  <meta name="author" content="Atendra Sharma">
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- AOS Animations -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+  <!-- AOS Scroll Animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
   <style>
     * {
@@ -24,8 +24,8 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #fffefc, #fef7e0);
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #fffefc;
       color: #333;
       line-height: 1.6;
     }
@@ -38,14 +38,12 @@
       line-height: 1.2;
       z-index: 1000;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 
-    body.loaded header {
-      opacity: 1;
-      transform: translateY(0);
+    @media (min-width: 769px) {
+      header {
+        position: static;
+      }
     }
 
     @media (max-width: 768px) {
@@ -86,10 +84,7 @@
     section {
       max-width: 1100px;
       margin: 30px auto;
-      padding: 25px 20px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 0 20px;
     }
 
     .intro-section {
@@ -97,10 +92,14 @@
       flex-wrap: wrap;
       gap: 20px;
       align-items: center;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     .intro-section img {
-      width: 150px;
+      width: 120px;
       border-radius: 10px;
     }
 
@@ -148,7 +147,6 @@
       padding: 20px;
       background-color: #eee;
       font-size: 0.95rem;
-      margin-top: 20px;
     }
 
     @media (max-width: 768px) {
@@ -156,40 +154,33 @@
         flex-direction: column;
         text-align: center;
       }
-
-      .intro-section img {
-        width: 120px;
-      }
-
       .btn {
         width: 100%;
       }
     }
+  header {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .intro-section {
-        justify-content: center;
-        text-align: left;
-      }
-
-      .intro-text {
-        padding-left: 20px;
-      }
-    }
-  </style>
+body.loaded header {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 
   <script>
     window.addEventListener('load', () => {
       document.body.classList.add('loaded');
     });
-
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('copy', e => e.preventDefault());
   </script>
 </head>
 <body>
   <header>
-    <img src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo"/>
+    <img src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo">
     <h1>🧠 ONLINE TEST WEB PORTAL</h1>
     <h2>🚀 Powered by SUNSHINE Computer Institute, Bayana</h2>
     <a class="btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
@@ -208,7 +199,7 @@
        ✅ Instant results with performance feedback<br>
        ✅ Hindi + English language support</p>
     <div class="intro-section">
-      <img src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Girls preparing for exam" loading="lazy"/>
+      <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma">
       <div class="intro-text">
         <h3>Atendra Sharma</h3>
         <p>CEO & Founder, Sunshine Online Test Portal</p>
@@ -269,7 +260,7 @@
   <section>
     <h2>💳 Make Payment via QR Code</h2>
     <p>Make your payment using the following QR code:</p>
-    <img class="qr" src="https://github.com/sunshine-digital/portal/blob/main/QR%20Code.jpg?raw=true" alt="QR Code" loading="lazy"/>
+    <img class="qr" src="https://github.com/sunshine-digital/portal/blob/main/QR%20Code.jpg?raw=true" alt="QR Code">
   </section>
 
   <section>
