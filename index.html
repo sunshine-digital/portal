@@ -36,7 +36,7 @@
       align-items: center;
       flex-wrap: wrap;
       background: #fdd835;
-      padding: 10px 20px;
+      padding: 12px 20px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       position: sticky;
       top: 0;
@@ -51,50 +51,33 @@
       transform: translateY(0);
     }
 
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex: 1;
-      min-width: 240px;
-    }
-
     .logo {
-      width: 50px;
-      border-radius: 8px;
-    }
-
-    .header-text h1 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    .header-text h2 {
-      font-size: 0.95rem;
-      font-weight: 500;
-      margin: 0;
-    }
-
-    .header-center {
-      flex: 0 0 auto;
-      text-align: center;
-    }
-
-    .student-pic {
-      width: 100px;
-      max-height: 90px;
+      width: 80px;
       border-radius: 10px;
     }
 
-    .header-right {
-      flex: 0 0 auto;
+    .header-title {
+      text-align: center;
+      flex: 1;
+    }
+
+    .header-title h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      margin-bottom: 5px;
+    }
+
+    .header-title h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
     }
 
     .header-btn {
       background-color: #ff6f00;
       color: #fff;
-      padding: 10px 20px;
+      padding: 10px 18px;
       font-size: 0.95rem;
       border: none;
       border-radius: 8px;
@@ -108,8 +91,17 @@
       background-color: #e65100;
     }
 
-    .mobile-only {
+    .student-footer-img {
       display: none;
+      max-width: 260px;
+      margin: 20px auto;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 992px) {
+      .student-footer-img {
+        display: block;
+      }
     }
 
     section {
@@ -182,29 +174,22 @@
     }
 
     @media (max-width: 768px) {
-      .header-center {
-        display: none;
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-title h1 {
+        font-size: 1.4rem;
+      }
+
+      .header-title h2 {
+        font-size: 0.9rem;
       }
 
       .header-btn {
         width: 100%;
         margin-top: 10px;
-      }
-
-      .header-left {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .mobile-only {
-        display: block;
-        margin: 10px auto 20px;
-        max-width: 260px;
-        border-radius: 12px;
-      }
-
-      .student-pic {
-        display: none;
       }
     }
   </style>
@@ -221,21 +206,12 @@
 
   <!-- HEADER -->
   <header>
-    <div class="header-left">
-      <img class="logo" src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
-      <div class="header-text">
-        <h1>🧠 ONLINE TEST WEB PORTAL</h1>
-        <h2>🚀 Powered by SUNSHINE Computer Institute, Bayana</h2>
-      </div>
+    <img class="logo" src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
+    <div class="header-title">
+      <h1>🧠 ONLINE TEST WEB PORTAL</h1>
+      <h2>🚀 Powered by SUNSHINE Computer Institute, Bayana</h2>
     </div>
-
-    <div class="header-center">
-      <img class="student-pic" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image" />
-    </div>
-
-    <div class="header-right">
-      <a class="header-btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
-    </div>
+    <a class="header-btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
   </header>
 
   <!-- MAIN SECTIONS -->
@@ -323,8 +299,8 @@
     📧 Email: sunshine.bayana@gmail.com</p>
   </section>
 
-  <!-- Image for Mobile Users -->
-  <img class="mobile-only" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Mobile Image" />
+  <!-- Student Image for Tablet & Mobile View -->
+  <img class="student-footer-img" src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" alt="Student Image" />
 
   <!-- Footer -->
   <footer>
