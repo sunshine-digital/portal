@@ -11,7 +11,7 @@
   <meta name="author" content="Atendra Sharma" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
 
   <!-- AOS Animation -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
@@ -33,10 +33,11 @@
     header {
       display: flex;
       align-items: center;
-      gap: 15px;
+      justify-content: space-between;
+      flex-wrap: wrap;
       background: #fdd835;
       color: #000;
-      padding: 10px 20px;
+      padding: 12px 20px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       position: sticky;
       top: 0;
@@ -54,21 +55,41 @@
     header img {
       width: 60px;
       border-radius: 8px;
+      margin-right: 10px;
     }
 
     .header-text {
       flex-grow: 1;
+      margin-left: 10px;
     }
 
     .header-text h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
+      font-size: 1.8rem;
+      font-weight: 800;
       animation: glow 2s ease-in-out infinite alternate;
     }
 
     .header-text h2 {
       font-size: 1rem;
       font-weight: 500;
+    }
+
+    .header-btn {
+      background-color: #ff6f00;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      white-space: nowrap;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+
+    .header-btn:hover {
+      background-color: #e65100;
     }
 
     @keyframes glow {
@@ -78,25 +99,6 @@
       to {
         text-shadow: 0 0 15px #ffa000, 0 0 25px #ff6f00;
       }
-    }
-
-    .btn {
-      background-color: #ff6f00;
-      color: #fff;
-      padding: 12px 24px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #e65100;
     }
 
     section {
@@ -169,20 +171,24 @@
     }
 
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header-text h1 {
+        font-size: 1.4rem;
+      }
+
+      .header-btn {
+        margin-top: 10px;
+        width: 100%;
+      }
+
       .intro-section {
         flex-direction: column;
         text-align: center;
-      }
-      .btn {
-        width: 100%;
-      }
-      header {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-      }
-      .header-text h1 {
-        font-size: 1.3rem;
       }
     }
   </style>
@@ -202,11 +208,8 @@
       <h1>🧠 ONLINE TEST WEB PORTAL</h1>
       <h2>🚀 Powered by SUNSHINE Computer Institute, Bayana</h2>
     </div>
+    <a class="header-btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
   </header>
-
-  <section>
-    <a class="btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
-  </section>
 
   <section>
     <h2>🌟 About Us – Sunshine Online Test Portal</h2>
