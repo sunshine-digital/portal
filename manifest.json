@@ -1,0 +1,21 @@
+{
+  "name": "Sunshine Online Test Portal",
+  "short_name": "RSCIT Test",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fffefc",
+  "theme_color": "#fdd835",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
