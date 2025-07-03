@@ -339,6 +339,7 @@
       <h2>Make RS-CIT exam success easy and digital!</h2>
     </div>
     <a class="header-btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
+     <link rel="manifest" href="manifest.json" />
   </header>
 
   <section>
@@ -448,5 +449,13 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>AOS.init();</script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => console.log('✅ Service Worker Registered', reg))
+      .catch(err => console.error('❌ Service Worker Error', err));
+  }
+</script>
+
 </body>
 </html>
