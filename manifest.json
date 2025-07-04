@@ -1,6 +1,6 @@
 {
   "name": "Sunshine Online Test Portal",
-  "short_name": "RSCIT Test",
+  "short_name": "SUNSHINE Portal",
   "start_url": "https://sunshine-digital.github.io/portal/",
   "display": "standalone",
   "background_color": "#fffefc",
