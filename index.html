@@ -356,6 +356,15 @@
        ✅ Instant results with performance feedback<br>
        ✅ Hindi + English language support</p>
 
+     <!-- 🌞 Sunshine Student Login Button -->
+<div style="text-align: center; padding: 15px 20px;">
+  <a href="https://13290054.github.io/bayana/" 
+     style="background-color: #001f4d; color: white; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 3px 8px rgba(0,0,0,0.2); display: inline-block;">
+    🌞 Sunshine Student Login
+  </a>
+</div>
+
+    
     <div class="intro-section">
       <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma" />
       <div class="intro-text">
@@ -423,13 +432,41 @@
     </div>
   </section>
 
-  <!-- 🌞 Sunshine Student Login Button -->
-<div style="text-align: center; padding: 15px 20px;">
-  <a href="https://13290054.github.io/bayana/" 
-     style="background-color: #001f4d; color: white; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 3px 8px rgba(0,0,0,0.2); display: inline-block;">
-    🌞 Sunshine Student Login
-  </a>
+ <!----------------------------->
+  <!-- 📲 Install App Button -->
+<div style="text-align: center; margin: 30px 0;">
+  <button id="installBtn" style="padding: 12px 20px; background-color: #001f4d; color: white; font-size: 1rem; border: none; border-radius: 8px; display: none;">
+    📲 Install App
+  </button>
 </div>
+
+<script>
+  let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+
+  // Listen for beforeinstallprompt event
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = 'inline-block'; // Show the button
+  });
+
+  // Handle click on install button
+  installBtn.addEventListener('click', () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('✅ User accepted the install prompt');
+        } else {
+          console.log('❌ User dismissed the install prompt');
+        }
+        deferredPrompt = null;
+      });
+    }
+  });
+</script>
+<!------------------------------->
 
 
 <!-- 🔹 Key Features & Notes Section -->
