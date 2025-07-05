@@ -346,6 +346,13 @@
     </header>
 
   <section>
+    <!----------------------------------->
+    <!-- 📲 Install App Button - Top Below Header -->
+<div style="text-align: center; margin: 20px 0;">
+  <button id="installBtn" style="padding: 12px 20px; background-color: #001f4d; color: white; font-size: 1rem; border: none; border-radius: 8px; display: none;">
+    📲 Install Sunshine App
+  </button>
+</div>
 
     <!----------------------------------->
 <section style="background-color: #fefefe; padding: 10px 20px 0 20px; font-family: 'Poppins', sans-serif;">
@@ -690,33 +697,33 @@
       .then(reg => console.log('✅ Service Worker Registered', reg))
       .catch(err => console.error('❌ Service Worker Error', err));
   }
-</script>
-<!-- 🔹 for mobile install trigar setting  -->
-  <script>
+<script>
   let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+
+  // Listen for beforeinstallprompt event
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
+    installBtn.style.display = 'inline-block'; // Show the button
+  });
 
-    const installBtn = document.createElement('button');
-    installBtn.textContent = "📱 Install Sunshine App";
-    installBtn.style = "position: fixed; bottom: 20px; right: 20px; background: navy; color: white; padding: 10px 20px; border: none; border-radius: 8px; z-index: 1000; font-family: 'Poppins', sans-serif;";
-    document.body.appendChild(installBtn);
-
-    installBtn.addEventListener('click', () => {
+  // Handle click on install button
+  installBtn.addEventListener('click', () => {
+    if (deferredPrompt) {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('✅ User accepted install');
+          console.log('✅ User accepted the install prompt');
         } else {
-          console.log('❌ User dismissed install');
+          console.log('❌ User dismissed the install prompt');
         }
         deferredPrompt = null;
-        installBtn.remove();
       });
-    });
+    }
   });
 </script>
+
 
 </body>
 </html>
