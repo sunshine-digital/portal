@@ -1,730 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sunshine Online Test Portal</title>
-
-  <!-- SEO Meta Tags -->
- <!-- ✅ Enhanced SEO Meta Tags -->
-<meta name="description" content="Sunshine Online Test Web Portal – Practice RS-CIT, Typing, iLearn Assessments, RKCL Old Papers, and Competitive Exams Online. Join Sunshine Institute for smart, digital preparation." />
-<meta name="keywords" content="Sunshine Online Test Portal, Sunshine Online Test Web Portal, Online Test Web Portal, RS-CIT, RSCIT, iLearn, RSCIT Old Paper, RSCIT Question, RKCL, Sunshine RSCIT, RSCIT iLearn Assessment Answer 2025, Typing Practice, Sunshine Institute, Competitive Exams" />
-<meta name="author" content="Atendra Sharma" />
-
-  
- <link rel="manifest" href="manifest.json" />
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
-
-  <!-- AOS Animation -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-
-  <!-- Google tag (gtag.js) -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunshine Online Test Portal</title>
+<meta name="description" content="Sunshine Online Test Web Portal – Practice RS-CIT, Typing, iLearn Assessments, RKCL Old Papers, and Competitive Exams Online. Join Sunshine Institute for smart, digital preparation.">
+<meta name="keywords" content="Sunshine Online Test Portal, Sunshine Online Test Web Portal, Online Test Web Portal, RS-CIT, RSCIT, iLearn, RSCIT Old Paper, RSCIT Question, RKCL, Sunshine RSCIT, RSCIT iLearn Assessment Answer 2025, Typing Practice, Sunshine Institute, Competitive Exams">
+<meta name="author" content="Atendra Sharma">
+<link rel="manifest" href="manifest.json">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H38KSNLQQT"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H38KSNLQQT');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-H38KSNLQQT');
 </script>
-
-  
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fffefc;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .notice-bar {
-      background: #fdd835;
-      color: #4E342E;
-      font-size: 15px;
-      font-weight: bold;
-      padding: 0;
-      margin: 0;
-      border-radius: 0;
-      font-family: 'Poppins', sans-serif;
-    }
-
-      header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      background: #fdd835;
-      padding: 12px 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    body.loaded header {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .logo {
-      width: 80px;
-      border-radius: 10px;
-    }
-
-    .header-title {
-      text-align: center;
-      flex: 1;
-    }
-
-    .header-title h1 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-      margin-bottom: 5px;
-    }
-
-    .header-title h2 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #333;
-    }
-
-    .header-btn {
-      background-color: #ff6f00;
-      color: #fff;
-      padding: 10px 18px;
-      font-size: 0.95rem;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: background 0.3s ease;
-    }
-
-    .header-btn:hover {
-      background-color: #e65100;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .intro-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      background: #f5f5f5;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      align-items: center;
-    }
-
-    .intro-section img {
-      width: 150px;
-      border-radius: 10px;
-    }
-
-    .intro-text {
-      flex: 1;
-      padding-left: 30px;
-    }
-
-    .intro-text h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #222;
-    }
-
-    .intro-text p {
-      font-size: 0.95rem;
-      color: #444;
-      margin-bottom: 6px;
-    }
-
-    .dual-columns {
-      display: flex;
-      gap: 30px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .dual-columns section {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-      background: #fff;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-    }
-
-    th, td {
-      padding: 10px;
-      border: 1px solid #eee;
-      font-size: 0.95rem;
-    }
-
-    th {
-      background-color: #f1c40f;
-      color: #000;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li::before {
-      content: '✔️';
-      margin-right: 10px;
-    }
-
-    .qr {
-      width: 200px;
-      display: block;
-      margin: 20px auto;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #eee;
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    footer p:last-child {
-      font-weight: bold;
-      font-size: 1rem;
-      color: #222;
-      margin-top: 10px;
-    }
-
-    .pricing-and-payment {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .pricing-block,
-    .payment-block {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .contact-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      padding: 0 20px;
-      margin: 30px auto;
-      max-width: 1100px;
-    }
-
-    .contact-img {
-      max-width: 320px;
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      flex: 1;
-    }
-
-    .contact-text {
-      flex: 1;
-      min-width: 300px;
-      text-align: left;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .header-title h1 {
-        font-size: 1.4rem;
-      }
-
-      .header-title h2 {
-        font-size: 0.9rem;
-      }
-
-      .header-btn {
-        width: 100%;
-        margin-top: 10px;
-      }
-
-      .intro-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .intro-section img {
-        margin-bottom: 10px;
-      }
-
-      .intro-text {
-        padding-left: 0;
-      }
-
-      .intro-text h3 {
-        font-size: 1.1rem;
-        margin-bottom: 5px;
-      }
-
-      .intro-text p {
-        font-size: 0.85rem;
-      }
-
-      .dual-columns {
-        flex-direction: column;
-      }
-
-      .pricing-and-payment {
-        flex-direction: column;
-      }
-
-      .contact-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .contact-text {
-        text-align: center;
-      }
-    }
-  </style>
-
-  <script>
-    window.addEventListener('load', () => {
-      document.body.classList.add('loaded');
-    });
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('copy', e => e.preventDefault());
-  </script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#fffefc;color:#333;line-height:1.6;}
+.notice-bar{background:#fdd835;color:#4E342E;font-size:15px;font-weight:bold;padding:0;margin:0;border-radius:0;font-family:'Poppins',sans-serif;}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;background:#fdd835;padding:12px 20px;box-shadow:0 2px 8px rgba(0,0,0,0.15);position:sticky;top:0;z-index:1000;opacity:0;transform:translateY(-20px);transition:opacity 0.6s ease-out, transform 0.6s ease-out;}
+body.loaded header{opacity:1;transform:translateY(0);}
+.logo{width:80px;border-radius:10px;}
+.header-title{text-align:center;flex:1;}
+.header-title h1{font-size:1.8rem;font-weight:800;text-shadow:1px 1px 3px rgba(0,0,0,0.2);margin-bottom:5px;}
+.header-title h2{font-size:1rem;font-weight:600;color:#333;}
+.header-btn{background:#ff6f00;color:#fff;padding:10px 18px;font-size:.95rem;border:none;border-radius:8px;text-decoration:none;font-weight:bold;box-shadow:0 4px 8px rgba(0,0,0,0.1);transition:background .3s ease;}
+.header-btn:hover{background:#e65100;}
+section{max-width:1100px;margin:30px auto;padding:0 20px;}
+.intro-section{display:flex;flex-wrap:wrap;justify-content:space-between;background:#f5f5f5;padding:20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.05);align-items:center;}
+.intro-section img{width:150px;border-radius:10px;}
+.intro-text{flex:1;padding-left:30px;}
+.intro-text h3{font-size:1.3rem;font-weight:700;color:#222;}
+.intro-text p{font-size:.95rem;color:#444;margin-bottom:6px;}
+.dual-columns{display:flex;gap:30px;justify-content:space-between;flex-wrap:wrap;}
+.dual-columns section{flex:1;min-width:300px;}
+table{width:100%;border-collapse:collapse;margin-top:15px;background:#fff;box-shadow:0 0 8px rgba(0,0,0,0.05);}
+th,td{padding:10px;border:1px solid #eee;font-size:.95rem;}
+th{background:#f1c40f;color:#000;}
+ul{list-style:none;padding-left:0;}
+ul li::before{content:'✔️';margin-right:10px;}
+.qr{width:200px;display:block;margin:20px auto;}
+footer{text-align:center;padding:20px;background:#eee;font-size:.95rem;color:#555;}
+footer p:last-child{font-weight:bold;font-size:1rem;color:#222;margin-top:10px;}
+.pricing-and-payment{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;}
+.pricing-block,.payment-block{flex:1;min-width:300px;}
+.contact-section{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:40px;padding:0 20px;margin:30px auto;max-width:1100px;}
+.contact-img{max-width:320px;width:100%;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);flex:1;}
+.contact-text{flex:1;min-width:300px;text-align:left;}
+@media (max-width:768px){header{flex-direction:column;text-align:center;}.header-title h1{font-size:1.4rem;}.header-title h2{font-size:.9rem;}.header-btn{width:100%;margin-top:10px;}.intro-section{flex-direction:column;text-align:center;}.intro-section img{margin-bottom:10px;}.intro-text{padding-left:0;}.intro-text h3{font-size:1.1rem;margin-bottom:5px;}.intro-text p{font-size:.85rem;}.dual-columns{flex-direction:column;}.pricing-and-payment{flex-direction:column;}.contact-section{flex-direction:column;text-align:center;}.contact-text{text-align:center;}section h2{font-size:1.3rem!important;}section h3{font-size:.9rem!important;}section p,section ul li{font-size:.8rem!important;line-height:1.4!important;}section ul{margin-bottom:0!important;}}
+</style>
+<script>
+window.addEventListener('load',()=>{document.body.classList.add('loaded');});
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('copy',e=>e.preventDefault());
+</script>
 </head>
 <body>
+<header>
+<img class="logo" src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo">
+<div class="header-title">
+<h1>🧠 ONLINE TEST WEB PORTAL</h1>
+<h2>Make RS-CIT exam success easy and digital!</h2>
+</div>
+<a class="header-btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
+</header>
 
-  <header>
-    <img class="logo" src="https://github.com/sunshine-digital/portal/blob/main/logo.jpg?raw=true" alt="Logo" />
-    <div class="header-title">
-      <h1>🧠 ONLINE TEST WEB PORTAL</h1>
-      <h2>Make RS-CIT exam success easy and digital!</h2>
-    </div>
-    <a class="header-btn" href="https://sunshine-portal.github.io/bayana/">🏱 Free Trial – Start Test Now</a>
-    </header>
-
-  <section>
-    <!----------------------------------->
-    <!-- 📲 Install App Button - Top Below Header -->
-<div style="text-align: center; margin: 20px 0;">
-  <button id="installBtn" style="padding: 12px 20px; background-color: #001f4d; color: white; font-size: 1rem; border: none; border-radius: 8px; display: none;">
-    📲 Install Sunshine App
-  </button>
+<section>
+<div style="text-align:center;margin:20px 0;">
+<button id="installBtn" style="padding:12px 20px;background:#001f4d;color:#fff;font-size:1rem;border:none;border-radius:8px;display:none;">📲 Install Sunshine App</button>
 </div>
 
-    <!----------------------------------->
-<section style="background-color: #fefefe; padding: 10px 20px 0 20px; font-family: 'Poppins', sans-serif;">
-  <div style="max-width: 1100px; margin: auto;">
+<section style="background:#fefefe;padding:10px 20px 0 20px;">
+<div style="max-width:1100px;margin:auto;">
+<h2 style="text-align:left;font-size:1.6rem;font-weight:700;color:#003366;margin:0 0 15px 0;">About Us – Sunshine Online Test Portal</h2>
+<p style="font-size:1rem;color:#333;text-align:left;max-width:100%;margin-bottom:15px;"><strong>Sunshine Online Test Portal</strong> एक स्मार्ट और भरोसेमंद डिजिटल प्लेटफॉर्म है, जो विशेष रूप से <strong>RS-CIT छात्रों</strong>, <strong>प्रतियोगी परीक्षा उम्मीदवारों</strong>, और <strong>टाइपिंग व स्टेनो सीखने वालों</strong> के लिए तैयार किया गया है। यह पोर्टल आपकी तैयारी को <strong>डिजिटल, स्मार्ट और प्रभावी</strong> बनाता है – मोबाइल और डेस्कटॉप दोनों पर।</p>
 
-    <h2 style="text-align: left; font-size: 1.6rem; font-weight: 700; color: #003366; margin: 0 0 15px 0;">
-      About Us – Sunshine Online Test Portal
-    </h2>
-
-    <p style="font-size: 1rem; color: #333; text-align: left; max-width: 100%; margin-bottom: 15px;">
-      <strong>Sunshine Online Test Portal</strong> एक स्मार्ट और भरोसेमंद डिजिटल प्लेटफॉर्म है, जो विशेष रूप से 
-      <strong>RS-CIT छात्रों</strong>, <strong>प्रतियोगी परीक्षा उम्मीदवारों</strong>, और 
-      <strong>टाइपिंग व स्टेनो सीखने वालों</strong> के लिए तैयार किया गया है। यह पोर्टल आपकी तैयारी को 
-      <strong>डिजिटल, स्मार्ट और प्रभावी</strong> बनाता है – मोबाइल और डेस्कटॉप दोनों पर।
-    </p>
-<!-------------------------------->
-<!-- Pricing Plan for Students (Centered) -->
-<div style="font-size: 0.75rem; color: #ff6f00; font-weight: 500; font-family: 'Poppins', sans-serif; text-align: center; padding: 0 15px;">
-  <p style="margin: 0;">💸 <strong>Pricing Plan for Students</strong></p>
-  <p style="margin: 3px 0;">🔔 RS-CIT तैयारी अब सिर्फ ₹49 में – 2 महीने की एक्सेस के साथ। 👉 One Student = One Username</p>
+<div style="font-size:0.75rem;color:#ff6f00;font-weight:500;text-align:center;padding:0 15px;margin-bottom:20px;">
+<p>💸 <strong>Pricing Plan for Students</strong></p>
+<p style="margin:3px 0;">🔔 RS-CIT तैयारी अब सिर्फ ₹49 में – 2 महीने की एक्सेस के साथ। 👉 One Student = One Username</p>
 </div>
 
-<!--------------------------------------->
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 25px; margin-bottom: 20px;">
-      <!-- Features -->
-      <div style="flex: 1; min-width: 300px;">
-        <h3 style="color: #1b5e20; font-size: 1.05rem; margin-bottom: 8px;">Key Features</h3>
-        <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.5; font-size: 0.9rem; color: #444; margin-bottom: 0;">
-          <li>Mobile & Desktop Friendly Interface</li>
-          <li>Real-time Test Experience</li>
-          <li>Instant Results with Performance Report</li>
-          <li>Available in Hindi & English</li>
-        </ul>
-      </div>
-
-      <!-- RS-CIT Content -->
-      <div style="flex: 1; min-width: 300px;">
-        <h3 style="color: #1b5e20; font-size: 1.05rem; margin-bottom: 8px;">RS-CIT Special Content</h3>
-        <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.5; font-size: 0.9rem; color: #444; margin-bottom: 0;">
-          <li>Old Papers & iLearn Selected Q&A</li>
-          <li>Chapter-wise Objective Questions</li>
-          <li>Easy & Effective Notes</li>
-          <li>Best Question Bank with Smart Techniques</li>
-          <li>Guaranteed Preparation for Final Exam</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Practice Mode & Ranking System Columns -->
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 25px;">
-      <!-- Practice Modes - Left -->
-      <div style="flex: 1; min-width: 300px;">
-        <h3 style="color: #1565c0; font-size: 1rem; margin-bottom: 8px;">Practice & Exam Modes</h3>
-        <ul style="list-style-type: square; padding-left: 20px; line-height: 1.5; font-size: 0.88rem; color: #444; margin-bottom: 0;">
-          <li><strong>Practice Mode:</strong> No time limit, with answer explanations</li>
-          <li><strong>Exam Mode:</strong> Time-bound tests like real exam environment</li>
-        </ul>
-      </div>
-
-      <!-- Ranking System - Right -->
-      <div style="flex: 1; min-width: 300px;">
-        <h3 style="color: #1565c0; font-size: 1rem; margin-bottom: 8px;">Ranking System</h3>
-        <ul style="list-style-type: square; padding-left: 20px; line-height: 1.5; font-size: 0.88rem; color: #444; margin-bottom: 0;">
-          <li><strong>Institute-Level Ranking:</strong> अपने बैच के छात्रों के बीच आपकी स्थिति</li>
-          <li><strong>State-Level Ranking:</strong> पूरे राज्य के छात्रों में आपकी रैंक</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Tagline -->
-    <p style="font-size: 0.95rem; font-weight: 600; text-align: center; color: #bf360c; margin-top: 30px; margin-bottom: 0;">
-  "तैयारी को दें स्मार्ट दिशा – Sunshine Online Test Portal के साथ!"
-</p>
-  </div>
-
-  <!-- Mobile Font Scaling -->
-  <style>
-    @media (max-width: 768px) {
-      section h2 {
-        font-size: 1.3rem !important;
-      }
-      section h3 {
-        font-size: 0.9rem !important;
-      }
-      section p,
-      section ul li {
-        font-size: 0.8rem !important;
-        line-height: 1.4 !important;
-      }
-      section ul {
-        margin-bottom: 0 !important;
-      }
-    }
-  </style>
-</section>
-
-
-
-    <!--------------------------------------------->
-<section style="background-color: #fefefe; padding: 0 20px; font-family: 'Poppins', sans-serif; margin: 0; margin-top: -20px;">
-  <div style="max-width: 1100px; margin: auto; padding: 0;">
-
-    <!-- Atendra Sharma Intro - Image Left, Text Right -->
-    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-
-      <!-- Left Image -->
-      <div style="flex: 1; min-width: 260px; text-align: center; margin-bottom: 15px;">
-        <img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true"
-             alt="Atendra Sharma"
-             style="width: 160px; border-radius: 10px;">
-      </div>
-
-      <!-- Right Text -->
-      <div style="flex: 2; min-width: 300px; padding-left: 20px;">
-        <h3 style="color: #003366; font-size: 1.2rem; margin-bottom: 6px;">🌟 Atendra Sharma</h3>
-        <p style="font-size: 0.9rem; color: #444; margin-bottom: 5px;">CEO & Founder – Sunshine Online Test Portal</p>
-        <p style="font-size: 0.88rem; color: #555;">“A passionate educator and digital learning leader, dedicated to empowering students with skills, speed, and success.”</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-    <!-- About System + Why Choose Row -->
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 25px;">
-
-      <!-- About Our System - Left -->
-      <div style="flex: 1; min-width: 300px;">
-        <h3 style="color: #1565c0; font-size: 1.05rem; margin-bottom: 8px;">⚙️ About Our System</h3>
-        <ul style="list-style-type: square; padding-left: 20px; line-height: 1.5; font-size: 0.88rem; color: #444;">
-          <li>Secure login/signup</li>
-          <li>Smart RS-CIT & practice tests</li>
-          <li>Auto results with ranking system</li>
-          <li>Mobile + desktop responsive</li>
-          <li>Institute panel & regular updates</li>
-        </ul>
-      </div>
-
-      <!-- Why Choose Sunshine - Right -->
-      <div style="flex: 1; min-width: 300px;">
-        <h3 style="color: #1b5e20; font-size: 1.05rem; margin-bottom: 8px;">🎯 Why Choose Sunshine?</h3>
-        <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.5; font-size: 0.88rem; color: #444;">
-          <li>Clear RS-CIT exam with confidence</li>
-          <li>Practice from anywhere, anytime</li>
-          <li>Digital platform over traditional books</li>
-          <li>Smart learning for institute & home</li>
-        </ul>
-        <p style="font-weight: 600; font-size: 0.88rem; color: #003366; margin-top: 8px;">🧭 Now study anywhere, anytime – only with SUNSHINE.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Responsive Typography Adjustments -->
-  <style>
-    @media (max-width: 768px) {
-      section h3 {
-        font-size: 1rem !important;
-      }
-      section p,
-      section ul li {
-        font-size: 0.8rem !important;
-      }
-    }
-  </style>
-</section>
-
-<!--------------------------------------------->
-<!-- 🌟 Institute Benefits Section -->
-<section style="background-color: #fefefe; padding: 0px 20px 0 20px; font-family: 'Poppins', sans-serif; margin-top: -10px;">
-  <div style="max-width: 1100px; margin: auto; padding: 20px 0 30px 0;">
->
-
-
-    <!-- Top Heading Center -->
-    <div style="text-align: center; margin-bottom: 25px;">
-      <h3 style="color: #003366; font-size: 1.2rem; font-weight: 700;">📚 Coaching Classes & IT Centers के लिए One-Stop Test Solution!</h3>
-      <p style="font-size: 0.9rem; color: #444; max-width: 750px; margin: 10px auto 0 auto;">
-        Sunshine Online Test Portal एक ऐसा स्मार्ट, सुरक्षित और पर्सनलाइज्ड प्लेटफॉर्म है जो आपके संस्थान को देगा एक डिजिटल बढ़त और आपके छात्रों को परीक्षा में सक्सेस की गारंटी।
-      </p>
-    </div>
-
-    <!-- Dual Columns Section -->
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 25px;">
-      <!-- Left Column: Institute Benefits -->
-      <div style="flex: 1; min-width: 300px;">
-        <h3 style="color: #1565c0; font-size: 1.05rem; margin-bottom: 8px;">🔶 क्या मिलेगा आपके संस्थान को?</h3>
-        <ul style="list-style-type: square; padding-left: 20px; line-height: 1.5; font-size: 0.88rem; color: #444;">
-          <li>आपके Institute का नाम, लोगो और पता वेबसाइट और पोर्टल पर दिखाई देगा – यानी Portal पूरी तरह आपके नाम से ही संचालित होगा।</li>
-          <li>स्टूडेंट्स का पूरा डेटा रहेगा आपके नियंत्रण में</li>
-          <li>आपके द्वारा दिए गए Username से ही कंटेंट एक्सेस होगा</li>
-          <li>Portal का Copyright रहेगा Sunshine के पास, संचालन का अधिकार आपका</li>
-        </ul>
-      </div>
-
-      <!-- Right Column: Result Impact -->
-      <div style="flex: 1; min-width: 300px;">
-        <h3 style="color: #1b5e20; font-size: 1.05rem; margin-bottom: 8px;">📈 RS-CIT और अन्य Courses के Students के Result में जबरदस्त सुधार!</h3>
-        <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.5; font-size: 0.88rem; color: #444;">
-          <li>नियमित मॉक टेस्ट से Exam Confidence बढ़ा</li>
-          <li>Instant Result & Feedback से Weak Points पर फोकस</li>
-          <li>सभी टेस्ट RS-CIT Pattern और Syllabus के अनुसार</li>
-          <li>अधिकतर विद्यार्थी First Attempt में पास हुए</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Center Benefit Message -->
-    <div style="text-align: center; margin: 35px 0 20px 0;">
-      <p style="font-size: 0.9rem; color: #333; max-width: 800px; margin: auto;">
-        🧑‍🏫 जो विद्यार्थी नियमित रूप से संस्थान नहीं आ पाते, उनके लिए यह पोर्टल एक Best Option है – ताकि उनकी तैयारी बनी रहे नियमित और ट्रैक पर।<br><br>
-        📚 जिनकी Learning पूरी हो गई है लेकिन Exam में अभी समय है, उनके लिए भी यह Portal है सबसे उपयोगी – ताकि वो Practice से जुड़े रहें और अपनी तैयारी को बनाए रखें Strong और Updated।<br><br>
-        📞 Contact करें और आज ही अपना Customized Test Portal एक्टिवेट कराएं
-      </p>
-    </div>
-
- <!-- Pricing and Payment Section -->
-<div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
-  <!-- Pricing Table -->
-  <div style="flex: 1; min-width: 300px; max-width: 500px; position: relative;">
-    <h3 style="color: #003366; font-size: 1.05rem; margin-bottom: 10px; text-align: center;">
-      💸 Pricing Plan for Institutes (ITGK) & Coaching Classes
-    </h3>
-    <table style="width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 0 12px rgba(0,0,0,0.1); font-size: 0.95rem; text-align: center; position: relative;">
-      <tr style="background-color: #f1c40f; color: #000;">
-        <th style="padding: 12px; border: 1px solid #eee;">Duration</th>
-        <th style="padding: 12px; border: 1px solid #eee;">With Your Institute Name</th>
-      </tr>
-      <tr style="background-color: #d4edda; position: relative;"> <!-- Highlighted row -->
-        <td style="padding: 12px; border: 1px solid #eee; font-weight: bold; position: relative;">
-          🌟 Lifetime
-          <span style="
-            background-color: #ff4757;
-            color: #fff;
-            font-size: 0.75rem;
-            font-weight: bold;
-            padding: 2px 6px;
-            border-radius: 4px;
-            position: absolute;
-            top: 5px;
-            right: -10px;
-            transform: rotate(-10deg);
-          ">Best Value</span>
-        </td>
-        <td style="padding: 12px; border: 1px solid #eee; font-weight: bold; color: green;">
-          Lifetime charge: INR 3,500/- + Maintenance charge: INR 800/- per annum.
-        </td>
-      </tr>
-    </table>
-  </div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:25px;margin-bottom:20px;">
+<div style="flex:1;min-width:300px;">
+<h3 style="color:#1b5e20;font-size:1.05rem;margin-bottom:8px;">Key Features</h3>
+<ul style="list-style-type:disc;padding-left:20px;line-height:1.5;font-size:0.9rem;color:#444;margin-bottom:0;">
+<li>Mobile & Desktop Friendly Interface</li>
+<li>Real-time Test Experience</li>
+<li>Instant Results with Performance Report</li>
+<li>Available in Hindi & English</li>
+</ul>
+</div>
+<div style="flex:1;min-width:300px;">
+<h3 style="color:#1b5e20;font-size:1.05rem;margin-bottom:8px;">RS-CIT Special Content</h3>
+<ul style="list-style-type:disc;padding-left:20px;line-height:1.5;font-size:0.9rem;color:#444;margin-bottom:0;">
+<li>Old Papers & iLearn Selected Q&A</li>
+<li>Chapter-wise Objective Questions</li>
+<li>Easy & Effective Notes</li>
+<li>Best Question Bank with Smart Techniques</li>
+<li>Guaranteed Preparation for Final Exam</li>
+</ul>
+</div>
 </div>
 
-
-
-      <!-- QR Code Payment -->
-      <div style="flex: 1; min-width: 300px; text-align: center;">
-        <h3 style="color: #003366; font-size: 1.05rem; margin-bottom: 10px;">💳 Make Payment via QR Code</h3>
-        <p style="font-size: 0.88rem; color: #444; margin-bottom: 10px;">Scan the QR below to make payment securely:</p>
-        <img src="https://github.com/sunshine-digital/portal/blob/main/QR%20Code.jpg?raw=true" alt="QR Code" style="width: 200px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!----------------------------------------------->
- <section style="background-color: #fefefe; padding: 20px 20px 10px 20px; font-family: 'Poppins', sans-serif;">
-  <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: space-between;">
-
-    <!-- Contact Image -->
-    <div style="flex: 1; min-width: 260px; max-width: 300px; text-align: center;">
-      <img src="https://github.com/sunshine-digital/portal/blob/main/girls%20for%20exam.jpg?raw=true" 
-           alt="Student Image" 
-           style="width: 100%; max-width: 260px; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-    </div>
-
-    <!-- Contact Details -->
-    <div style="flex: 2; min-width: 280px;">
-      <h2 style="color: #003366; font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">📞 Contact Us</h2>
-      <p style="font-size: 0.95rem; color: #444; margin-bottom: 8px;">☎️ <strong>Call/WhatsApp:</strong> <a href="tel:9929856121" style="color: #1565c0; text-decoration: none;">9929856121</a></p>
-      <p style="font-size: 0.95rem; color: #444;"><strong>📧 Email:</strong> <a href="mailto:sunshine.bayana@gmail.com" style="color: #1565c0; text-decoration: none;">sunshine.bayana@gmail.com</a></p>
-    </div>
-
-  </div>
-</section>
-
-
- <!----------------------------->
-    <!-- 📲 Install App Button -->
-<div style="text-align: center; margin: 30px 0;">
-  <button id="installBtn" style="padding: 12px 20px; background-color: #001f4d; color: white; font-size: 1rem; border: none; border-radius: 8px; display: none;">
-    📲 Install App
-  </button>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:25px;">
+<div style="flex:1;min-width:300px;">
+<h3 style="color:#1565c0;font-size:1rem;margin-bottom:8px;">Practice & Exam Modes</h3>
+<ul style="list-style-type:square;padding-left:20px;line-height:1.5;font-size:0.88rem;color:#444;margin-bottom:0;">
+<li><strong>Practice Mode:</strong> No time limit, with answer explanations</li>
+<li><strong>Exam Mode:</strong> Time-bound tests like real exam environment</li>
+</ul>
+</div>
+<div style="flex:1;min-width:300px;">
+<h3 style="color:#1565c0;font-size:1rem;margin-bottom:8px;">Ranking System</h3>
+<ul style="list-style-type:square;padding-left:20px;line-height:1.5;font-size:0.88rem;color:#444;margin-bottom:0;">
+<li><strong>Institute-Level Ranking:</strong> अपने बैच के छात्रों के बीच आपकी स्थिति</li>
+<li><strong>State-Level Ranking:</strong> पूरे राज्य के छात्रों में आपकी रैंक</li>
+</ul>
+</div>
 </div>
 
+<p style="font-size:0.95rem;font-weight:600;text-align:center;color:#bf360c;margin-top:30px;margin-bottom:0;">"तैयारी को दें स्मार्ट दिशा – Sunshine Online Test Portal के साथ!"</p>
+</div>
+</section>
+
+<section style="background:#fefefe;padding:0 20px;margin-top:-20px;">
+<div style="max-width:1100px;margin:auto;padding:0;">
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;background:#f9f9f9;padding:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+<div style="flex:1;min-width:260px;text-align:center;margin-bottom:15px;">
+<img src="https://github.com/sunshine-digital/portal/blob/main/mypic1.jpg?raw=true" alt="Atendra Sharma" style="width:160px;border-radius:10px;">
+</div>
+<div style="flex:2;min-width:300px;padding-left:20px;">
+<h3 style="color:#003366;font-size:1.2rem;margin-bottom:6px;">🌟 Atendra Sharma</h3>
+<p style="font-size:0.9rem;color:#444;margin-bottom:5px;">CEO & Founder – Sunshine Online Test Portal</p>
+<p style="font-size:0.88rem;color:#555;">“A passionate educator and digital learning leader, dedicated to empowering students with skills, speed, and success.”</p>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:#fefefe;padding:0 20px;margin-top:-10px;">
+<div style="max-width:1100px;margin:auto;padding:20px 0 30px 0;">
+<div style="text-align:center;margin-bottom:25px;">
+<h3 style="color:#003366;font-size:1.2rem;font-weight:700;">📚 Coaching Classes & IT Centers के लिए One-Stop Test Solution!</h3>
+<p style="font-size:0.9rem;color:#444;max-width:750px;margin:10px auto 0 auto;">Sunshine Online Test Portal एक ऐसा स्मार्ट, सुरक्षित और पर्सनलाइज्ड प्लेटफॉर्म है जो आपके संस्थान को देगा एक डिजिटल बढ़त और आपके छात्रों को परीक्षा में सक्सेस की गारंटी।</p>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:25px;">
+<div style="flex:1;min-width:300px;">
+<h3 style="color:#1565c0;font-size:1.05rem;margin-bottom:8px;">🔶 क्या मिलेगा आपके संस्थान को?</h3>
+<ul style="list-style-type:square;padding-left:20px;line-height:1.5;font-size:0.88rem;color:#444;">
+<li>आपके Institute का नाम, लोगो और पता वेबसाइट और पोर्टल पर दिखाई देगा – यानी Portal पूरी तरह आपके नाम से ही संचालित होगा।</li>
+<li>स्टूडेंट्स का पूरा डेटा रहेगा आपके नियंत्रण में</li>
+<li>आपके द्वारा दिए गए Username से ही कंटेंट एक्सेस होगा</li>
+<li>Portal का Copyright रहेगा Sunshine के पास, संचालन का अधिकार आपका</li>
+</ul>
+</div>
+<div style="flex:1;min-width:300px;">
+<h3 style="color:#1b5e20;font-size:1.05rem;margin-bottom:8px;">📈 RS-CIT और अन्य Courses के Students के Result में जबरदस्त सुधार!</h3>
+<ul style="list-style-type:disc;padding-left:20px;line-height:1.5;font-size:0.88rem;color:#444;">
+<li>छात्रों के लिए इंटरैक्टिव टेस्ट और प्रैक्टिस एक्सपीरियंस</li>
+<li>Instant Result और Smart Ranking System</li>
+<li>Chapter-wise Notes & Previous Year Papers</li>
+<li>Mobile & Desktop दोनों पर Smooth Experience</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2025 Sunshine Online Test Portal. All Rights Reserved.</p>
+<p>Developed by Atendra Sharma – Bayana, Rajasthan</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-  let deferredPrompt;
-  const installBtn = document.getElementById('installBtn');
-
-  // Listen for beforeinstallprompt event
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = 'inline-block'; // Show the button
-  });
-
-  // Handle click on install button
-  installBtn.addEventListener('click', () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('✅ User accepted the install prompt');
-        } else {
-          console.log('❌ User dismissed the install prompt');
-        }
-        deferredPrompt = null;
-      });
-    }
-  });
+AOS.init({duration:1000,easing:'ease-in-out',once:true,mirror:false});
+const installBtn = document.getElementById('installBtn');
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt',(e)=>{e.preventDefault();deferredPrompt=e;installBtn.style.display='inline-block';});
+installBtn.addEventListener('click',()=>{installBtn.style.display='none';deferredPrompt.prompt();deferredPrompt.userChoice.then(choiceResult=>{deferredPrompt=null;});});
 </script>
-
-<!------------------------------->
-
-
-<!-- 🔹 Key Features & Notes Section -->
-<div style="background-color: #f9f9f9; padding: 8px 15px; font-family: 'Poppins', sans-serif; font-size: 11px; color: #333; border-top: 1px solid #ccc;">
-  <p style="margin-bottom: 5px;">🔹 <strong>Key Features & Notes</strong></p>
-  <p style="margin: 3px 0;">🔐 Single Login Policy: One user ID can be used by only 1 student.</p>
-  <p style="margin: 3px 0;">🏫 For Institute Use: ✅ Simultaneous Login support for up to 50 students at the same time.</p>
-</div>
-
-<!------------------------------------------->
-  <footer>
-    <p>© 2025 Sunshine Online Test Web Portal, Bayana (Bharatpur) All rights reserved.</p>
-    <p>🌞 “Shine with Sunshine!”<br>"Your Success Begins Here – Practice, Perform, Progress!"</p>
-    
-
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>AOS.init();</script>
-  <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
-      .then(reg => console.log('✅ Service Worker Registered', reg))
-      .catch(err => console.error('❌ Service Worker Error', err));
-  }
-<script>
-  let deferredPrompt;
-  const installBtn = document.getElementById('installBtn');
-
-  // Listen for beforeinstallprompt event
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = 'inline-block'; // Show the button
-  });
-
-  // Handle click on install button
-  installBtn.addEventListener('click', () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('✅ User accepted the install prompt');
-        } else {
-          console.log('❌ User dismissed the install prompt');
-        }
-        deferredPrompt = null;
-      });
-    }
-  });
-</script>
-
-
 </body>
 </html>
-
-
-
-
-
-
